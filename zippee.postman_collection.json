@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "30323244-f73d-429d-b7e9-4272503bed03",
+		"name": "zippee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31696688",
+		"_collection_link": "https://futurbotconsolidated.postman.co/workspace/Corseco-Tech~483013a8-5f1a-432e-849a-c7d3eafaa82c/collection/31696688-30323244-f73d-429d-b7e9-4272503bed03?action=share&source=collection_link&creator=31696688"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "robin2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Robin@123",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "Robin@123",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Robin",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Singh",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/authentication/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"authentication",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "robin1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Robin@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/authentication/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"authentication",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "get all tasks",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								""
+							],
+							"query": [
+								{
+									"key": "completed",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "hap",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "task details",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NDE5NjEwLCJpYXQiOjE3NTg4MTQ4MTAsImp0aSI6IjA5ZDE5M2ExYzExMjQ1MWQ4YzNjYzNhOTEzM2QzMjg1IiwidXNlcl9pZCI6IjIiLCJpZCI6Miwicm9sZSI6IlVTRVIiLCJmaXJzdF9uYW1lIjoicm9iaW4xIiwibGFzdF9uYW1lIjoiIiwiZW1haWwiOiJyb2JpbjFAZ21haWwuY29tIn0.md-AcCSKfeQ0vE6s1L2__j5mahbGO2ndfQGzvbONHPc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "happy",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "very good",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "sadjfnofsn",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NDE5NjEwLCJpYXQiOjE3NTg4MTQ4MTAsImp0aSI6IjA5ZDE5M2ExYzExMjQ1MWQ4YzNjYzNhOTEzM2QzMjg1IiwidXNlcl9pZCI6IjIiLCJpZCI6Miwicm9sZSI6IlVTRVIiLCJmaXJzdF9uYW1lIjoicm9iaW4xIiwibGFzdF9uYW1lIjoiIiwiZW1haWwiOiJyb2JpbjFAZ21haWwuY29tIn0.md-AcCSKfeQ0vE6s1L2__j5mahbGO2ndfQGzvbONHPc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "too  happy",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NDE5NjEwLCJpYXQiOjE3NTg4MTQ4MTAsImp0aSI6IjA5ZDE5M2ExYzExMjQ1MWQ4YzNjYzNhOTEzM2QzMjg1IiwidXNlcl9pZCI6IjIiLCJpZCI6Miwicm9sZSI6IlVTRVIiLCJmaXJzdF9uYW1lIjoicm9iaW4xIiwibGFzdF9uYW1lIjoiIiwiZW1haWwiOiJyb2JpbjFAZ21haWwuY29tIn0.md-AcCSKfeQ0vE6s1L2__j5mahbGO2ndfQGzvbONHPc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
