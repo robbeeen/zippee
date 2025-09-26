@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Zippee Assessment - Task Management API
 
 A Django REST Framework-based Task Management API with authentication, role-based permissions, and CRUD operations.
@@ -148,3 +149,7 @@ Key settings in `settings.py`:
 
 ### POSTMAN Collection JSON for all apis
  - zippee.postman_collection.json contains all the apis you can directly import that in postman and run the apis
+=======
+# zippee
+zippee-assessment
+>>>>>>> 276269e1fd920c3915e8fabbb0160bcf5d937f44
